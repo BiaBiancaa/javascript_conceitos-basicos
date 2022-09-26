@@ -1,0 +1,141 @@
+@import 'reset';
+@mixin girar($graus){
+transform:rotate($graus);
+-webkit-transform: rotate($graus);
+-moz-transform: rotate($graus);
+-ms-transform: rotate($graus);
+}
+$cor1:rgb(144, 255, 244);
+$cor2:rgb(107, 252, 237);
+$cor3:rgb(34, 255, 222);
+$cor4:#fff;
+$corhover:rgb(255, 251, 238);
+section{
+    padding: 10px;
+}
+h1{
+    border: 3px solid $cor1;
+    color:$cor2;
+    padding: 10px;
+}
+em{
+    color: $cor2;
+}
+li{
+    padding: 5px 0;
+}
+%fundamento-a{
+    display:block;
+    background-color:$cor2 ;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: $cor4;
+
+    &:hover{
+        background-color:$corhover ;
+        color: $cor3;
+        }
+    }
+
+    aside{
+        position:fixed;
+        top:0;
+        right: 0;
+        z-index:999;
+        display:flex;
+       
+        #menu-opener{
+            width:40px;
+            height: 40px;
+            cursor: pointer;
+            margin-top:10px;
+            margin-right: 10px;
+        }
+    
+        #menu-area{
+            width: 0px;
+            height: 100vh;
+            background-color: $cor3;
+            overflow-x:hidden;
+            overflow-y:auto;
+            transition: all ease .5s;
+        
+            ul{
+                @extend %fundamento-ul-li;
+                li{
+                    @extend %fundamento-ul-li;
+                    display: block;
+                    padding: 10px;
+                    a{
+                    @extend %fundamento-a;
+                    }
+                }
+            }
+        } 
+    }  
+    
+    %fundamento-ul-li{
+        padding: 0;
+        list-style: none;
+    }
+
+nav{
+    background-color:$cor3;
+    ul{
+        margin:0;
+        padding: 0;
+        list-style: none;
+    }
+    li{
+        display: inline-block;
+        padding: 10px;
+          a{
+            @extend %fundamento-a;
+            }
+        }
+    }
+
+
+
+
+.scrollbotton{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color:$cor2 ;
+    position:fixed;
+    right: 20px;
+    bottom:20px;
+    z-index:999;
+    cursor: pointer;
+    
+}
+
+.azul{
+    background-color: #00f;
+    color: #fff;
+}
+.vermelho{
+    background-color: #f00;
+    color: #fff;
+}
+.verde{
+    background-color: #0f0;
+    color: #000;
+}
+
+#telefone{
+    display:none;
+}
+
+.flex1{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+.flex2{
+    display: flex;
+    flex: 2;
+    justify-content: space-between;
+}

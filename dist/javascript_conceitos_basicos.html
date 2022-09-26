@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head>
+    <title>Javascript - Conceitos Básicos</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/base.css" />
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="#area1">Evento de Clique</a></li>
+        <li><a href="#area2">Evento de teclado</a></li>
+        <li><a href="#area3">Mudança de estilos</a></li>
+        <li><a href="#area4">Array</a></li>
+        <li><a href="#area5">Objeto (1-2)</a></li>
+        <li><a href="#area6">Objeto (2-2)</a></li>
+        <li><a href="#area7">Projeto Menu de Navegação</a></li>
+        <li><a href="#area8">Switch</a></li>
+        <li><a href="#area9">Loop For</a></li>
+        <li><a href="#area10">Loop While</a></li>
+        <li><a href="#area11">QuerySelector (QuerySelectorAll)</a></li>
+    </ul>
+    </nav>
+
+    <section>
+        <h1 id="area1"><em>Evento de Clique</em></h1>
+        <h3>Evento é o <em>acontecimento de uma ação</em></h3>
+        <ol type="I">
+            <li>Evento pelo <em>JS</em></li>
+            <button onclick="clicou()">Clique em mim</button>
+            <img src="../assets/images/event1.png"/>
+            <li>Evento pelo <em>HTML</em></li>
+            <h3 id="titulo">Mensagem Surpresa!</h3>
+            <button onclick="document.getElementById('titulo').innerHTML='Parbéns você fez um EVENTO!'">Clique em mim</button>
+            <img src="../assets/images/event2.png"/>
+            <li>Evento pelo <em>this</em></li>
+            <button onclick="this.innerHTML='Clicou'">Clique em mim</button>
+            <img src="../assets/images/event3.png"/>
+            <li>Evento sem ser em um  <em>botão</em></li>
+            <h3 onmouseover="console.log('Passou o mouse')"> Usou onmouseover!</h3>
+            <img src="../assets/images/event4.png"/>
+            <img src="../assets/images/event4.1.png"/>
+            <h3 onmouseout="console.log('Tirou o mouse')"> Usou onmouseout!</h3>
+            <img src="../assets/images/event5.png"/>
+            <img src="../assets/images/event5.1.png"/>
+            <li><em>Vários</em> eventos em um <em>elemento</em></li>
+            <h3
+            onclick="console.log('Clicou')"
+            onmouseover="console.log('Pasou o mouse')"
+            onmouseout="console.log('Tirou o mouse')"
+            >Veja no Console</h3>
+            <img src="../assets/images/event6.png"/>
+            <img src="../assets/images/event6.1.png"/>
+        </ol>
+        
+        <h1 id="area2"><em>Evento de teclado</em></h1>
+        <ol type="I">
+            <li><em>onkeydown</em> quando pressiona a tecla</li>
+            <input onkeydown="digitando()" id="campo" type="text" name="onkeyup" placeholder="onkeydown"/><br/>
+            <img src="../assets/images/tel1.png"/>
+            <img src="../assets/images/tel1.1.png"/>
+            <li><em>onkeyup</em> quando solta a tecla</li>
+            <input onkeyup="digitou()" id="campo" type="text" name="onkeyup" placeholder="onkeyup"/><br/>
+            <img src="../assets/images/tel2.png"/>
+            <img src="../assets/images/tel2.1.png"/>
+            <li><em>event</em> mostra o que a contece no evento</li>
+            <input onkeyup="digitou(event)" id="campo" type="text" name="onkeyup+event" placeholder="onkeyup+event"/><br/>
+            <img src="../assets/images/tel3.png"/>
+            <img src="../assets/images/tel3.1.png"/><br/>
+            <img src="../assets/images/tel3.2.png"/>
+            <li><em>event</em> mostrar quando clicar em uma tela específica</li>
+            <input onkeyup="teclou(event)" id="campo" type="text" name="event" placeholder="event"/><br/>
+            <img src="../assets/images/tel4.png"/>
+        </ol>
+       
+        <h1 id="area3"><em>Mudança de estilos</em></h1>
+        <h2><em>Exemplo1</em></h2>
+        <h3 id="titulocomcor">Clique nos botões!</h3>
+        <button onclick="azul()">azul</button>
+        <button onclick="vermelho()">vermelho</button>
+        <button onclick="verde()">verde</button>
+        <h3>HTML</h3>
+        <img src="../assets/images/mudi1.png"/>
+        <h3>SCSS</h3>
+        <img src="../assets/images/mudi1.1.png"/>
+        <h3>JS</h3>
+        <img src="../assets/images/mudi1.2.png"/>
+        <h2><em>Exemplo2</em></h2>
+        <div id="telefone">999999999</div>
+        <button onclick="mostrartelefone(this)">Mostrar Telefone</button>
+        <h3>HTML</h3>
+        <img src="../assets/images/mudi2.png"/>
+        <h3>SCSS</h3>
+        <img src="../assets/images/mudi2.1.png"/>
+        <h3>JS</h3>
+        <img src="../assets/images/mudi2.2.png"/>
+      
+        <h1 id="area4"><em>Array</em></h1>
+        <h3>Em uma <em>única variável</em> vai armazenar valores diferentes</h3>
+        <ol type="I">
+            <li>Criando <em>array</em></li>
+            <img src="../assets/images/array1.png"/>
+            <img src="../assets/images/array1.1.png"/>
+            <li>Selecionando <em>1 item</em> do <em>array</em></li>
+            <img src="../assets/images/array2.png"/>
+            <img src="../assets/images/array2.1.png"/>
+            <li>Array <em>dentro</em> de array</li>
+            <img src="../assets/images/array3.png"/>
+            <img src="../assets/images/array3.1.png"/>
+        </ol>
+        
+        <h1 id="area5"><em>Objeto (1-2)</em></h1>
+        <h3>Ao contrário do array o objeto <em>não é númerado</em> e <em>sim nomeado</em></h3>
+        <img src="../assets/images/obj1.png"/>
+        <img src="../assets/images/obj2.png"/>
+      
+        <h1 id="area6"><em>Objeto (2-2)</em></h1>
+        <h3>Utilizando <em>this e boolean</em></h3>
+        <ol type="I">
+            <li>Carro Ligado</li>
+            <img src="../assets/images/obj3.png"/>
+            <img src="../assets/images/obj4.png"/>
+            <li>Carro Desligado</li>
+            <img src="../assets/images/obj5.png"/>
+            <img src="../assets/images/obj6.png"/><br/><br/>
+            <img src="../assets/images/obj7.png"/>
+            <img src="../assets/images/obj8.png"/>
+            <li>Objeto <em>dentro</em> de array</li>
+            <img src="../assets/images/obj9.png"/>
+            <img src="../assets/images/obj10.png"/>
+        </ol>
+        
+        <h1 id="area7"><em>Projeto Menu de Navegação</em></h1>
+        <h3><em>Obs:.</em> o <em>Toggle</em> significa quando o elmento entra e sai</h3>
+        <ol type="I">
+            <li>HTML</li>
+            <img src="../assets/images/menu1.png"/>
+            <li>SCSS</li>
+            <img src="../assets/images/menu2.png"/>
+            <img src="../assets/images/menu3.png"/>
+            <img src="../assets/images/menu4.png"/>
+            <li>JS</li>
+            <img src="../assets/images/menu5.png"/>
+        </ol>
+        <aside>
+            <div id="menu-opener" onclick="menuToggle()">
+                <img src="../assets/images/menu.png" width="36"/>
+            </div>
+            <div id="menu-area">
+                <ul>
+                    <li><a href="#area1">Evento de Clique</a></li>
+                    <li><a href="#area2">Evento de teclado</a></li>
+                    <li><a href="#area3">Mudança de estilos</a></li>
+                    <li><a href="#area4">Array</a></li>
+                    <li><a href="#area5">Objeto (1-2)</a></li>
+                    <li><a href="#area6">Objeto (2-2)</a></li>
+                    <li><a href="#area7">Projeto Menu de Navegação</a></li>
+                    <li><a href="#area8">Switch</a></li>
+                    <li><a href="#area9">Loop For</a></li>
+                    <li><a href="#area10">Loop While</a></li>
+                    <li><a href="#area11">QuerySelector (QuerySelectorAll)</a></li>
+                </ul>
+            </div>
+        </aside>
+        
+        <h1 id="area8"><em>Switch</em></h1>
+        <h3>Quando você tem <em>um valor</em> e á partir dele precisa fazer <em>várias</em> condicionais diferentes</h3>
+        <div id="dia"></div>
+        <div id="semana"></div>
+        <h3>HTML</h3>
+        <img src="../assets/images/switch1.png"/>
+        <h3>JS</h3>
+        <img src="../assets/images/switch2.png"/>
+        <img src="../assets/images/switch3.png"/>
+
+        <h1 id="area9"><em>Loop For</em></h1>
+        <h3>É uma forma de rodar <em>o mesmo código</em> várias vezes distintas</h3>
+        <ol type="I">
+            <li><em>For Loop - JS</em></li>
+            <div class="flex1">
+            <div id="demo"></div>
+            <div><img src="../assets/images/loop1.png"/></div>
+            </div>
+            <li><em>For Loop Array - JS</em></li>
+            <div class="flex1">
+            <div id="demo2"></div>
+            <div><img src="../assets/images/loop2.png"/></div>
+            </div>
+        </ol>
+        
+        <h1 id="area10"><em>Loop While</em></h1>
+        <h3><em>Em quanto</em> a condição for <em>satisfatória</em> ele vai rodar o código</h3>
+        <div class="flex1">
+        <div id="demo3"></div>
+        <div><img src="../assets/images/loop3.png"/></div>
+        </div>
+
+        <h1 id="area11"><em>QuerySelector (QuerySelectorAll)</em></h1>
+        <div class="flex2">
+        <div>
+        <h3 class="subtitulo">Ingredientes</h3>
+        <ul class="lista">
+            <li>Ovo</li>
+            <li>Chocolate</li>
+            <li>Manteiga</li>
+            <li>Corante</li>
+        </ul>
+        <ol class="lista">
+            <li>Ovo</li>
+            <li>Chocolate</li>
+            <li>Manteiga</li>
+            <li>Corante</li>
+        </ol>
+        <h3 class="subtitulo">Modo de Preparo</h3>
+        <p>Faça XYZ, depois ABC</p>
+      </div>
+      <div>
+        <h3><em>QuerySelector</em> seleciona apenas o primeiro</h3>
+        <img src="../assets/images/query1.png"/>
+      </div>
+      <div>
+        <h3><em>QuerySelectorAll</em> seleciona todos</h3>
+        <img src="../assets/images/query2.png"/>
+    </div>
+      </div>
+    </section>
+    <div onclick="subirTela()" class="scrollbotton"></div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
